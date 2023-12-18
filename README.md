@@ -24,3 +24,11 @@ cd DriveVLM
 ```
 export PYTHONPATH=$PYTHONPATH:PATH_TO_DriveVLM
 ```
+
+Create Dockerfile
+```Dockerfile
+FROM carlasim/carla:0.9.10.1
+WORKDIR /home/carla/Import
+COPY ./AdditionalMaps_0.9.10.1.tar.gz ./
+WORKDIR /home/carla
+RUN ./ImportAssets.sh
