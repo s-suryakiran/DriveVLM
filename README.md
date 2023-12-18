@@ -1,20 +1,4 @@
-# TCP - Trajectory-guided Control Prediction for End-to-end Autonomous Driving: A Simple yet Strong Baseline
-
-![teaser](assets/teaser_.png)
-
-> Trajectory-guided Control Prediction for End-to-end Autonomous Driving: A Simple yet Strong Baseline  
-> [Penghao Wu*](https://scholar.google.com/citations?user=9mssd5EAAAAJ&hl=en), [Xiaosong Jia*](https://jiaxiaosong1002.github.io/), [Li Chen*](https://scholar.google.com/citations?user=ulZxvY0AAAAJ&hl=en), [Junchi Yan](https://thinklab.sjtu.edu.cn/), [Hongyang Li](https://lihongyang.info/), [Yu Qiao](http://mmlab.siat.ac.cn/yuqiao/)    
->  - [arXiv Paper](https://arxiv.org/abs/2206.08129), NeurIPS 2022
->  - [Blog in Chinese](https://zhuanlan.zhihu.com/p/532665469)
-
-	
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/trajectory-guided-control-prediction-for-end/autonomous-driving-on-carla-leaderboard)](https://paperswithcode.com/sota/autonomous-driving-on-carla-leaderboard?p=trajectory-guided-control-prediction-for-end)
-
-This repository contains the code for the paper [Trajectory-guided Control Prediction for End-to-end Autonomous Driving: A Simple yet Strong Baseline](https://arxiv.org/abs/2206.08129).
-
-
-TCP is a simple unified framework to combine trajectory and control prediction for end-to-end autonomous driving.  By time of release in June 17 2022, our method achieves new state-of-the-art on [CARLA AD Leaderboard](https://leaderboard.carla.org/leaderboard/), in which we rank the **first** in terms of the Driving Score and Infraction Penalty using only a single camera as input. 
-
+#DriveVLM
 
 ## Setup
 Download and setup CARLA 0.9.10.1
@@ -33,14 +17,12 @@ cd ..
 Clone this repo and build the environment
 
 ```
-git clone https://github.com/OpenPerceptionX/TCP.git
-cd TCP
-conda env create -f environment.yml --name TCP
-conda activate TCP
+git clone https://github.com/OpenPerceptionX/TCP.git](https://github.com/s-suryakiran/DriveVLM.git
+cd DriveVLM
 ```
 
 ```
-export PYTHONPATH=$PYTHONPATH:PATH_TO_TCP
+export PYTHONPATH=$PYTHONPATH:PATH_TO_DriveVLM
 ```
 
 ## Dataset
