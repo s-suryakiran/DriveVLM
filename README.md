@@ -13,6 +13,8 @@ rm CARLA_0.9.10.1.tar.gz
 rm AdditionalMaps_0.9.10.1.tar.gz
 cd ..
 ```
+Also update the ~/.bashrc file:
+export CARLA_ROOT=PATH_TO_CARLA_0.9.10.1
 
 Clone this repo and build the environment
 
@@ -34,8 +36,10 @@ WORKDIR /home/carla
 RUN ./ImportAssets.sh
 ```
 
-Run Dockerfile
-- ```docker build -t carla:eval .```
+Build Dockerfile
+```docker build -t carla:eval .```
+
+
 - ```sudo docker run --privileged --gpus 0 -e SDL_VIDEODRIVER=offscreen -e SDL_HINT_CUDA_DEVICE=0 -p 2000-2002:2000-2002 -v /tmp/.X11-unix:/tmp/.X11-unix:rw -it carla:eval /bin/bash ./CarlaUE4.sh```
 
 Install Python3.7:
@@ -46,6 +50,7 @@ Install Python3.7:
  sudo apt install python3.7
  sudo apt-get install python3.7-distutils
 ```
+
 Setup Python Virtual Environments:
 ```
 sudo apt-get install python3-pip
@@ -59,3 +64,8 @@ python3.7 -m virtualenv tcpenv
 source ./tcpenv/bin/activate
 pip install -r tcp_env_requirements.txt
 ```
+To benchmark the reference TCP model:
+- cd PATH_TO_DriveVLM
+- Download their model - ```wget https://storage.googleapis.com/carla_dataset_bucket/Eval_Uploads/best_model.ckpt```
+- Modify the ```TEAM_CONFIG``` in /leaderboard/scripts/run_evaluation.sh
+- run the run_evaluation.sh - ```sh leaderboard/scripts/run_evaluation.sh```
