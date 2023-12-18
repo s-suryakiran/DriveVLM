@@ -67,7 +67,7 @@ python3.7 -m virtualenv tcpenv
 source ./tcpenv/bin/activate
 pip install -r tcp_env_requirements.txt
 ```
-
+# Benchmarking
 ### Run the carla docker server:
 - ```sudo docker run --privileged --gpus 0 -e SDL_VIDEODRIVER=offscreen -e SDL_HINT_CUDA_DEVICE=0 -p 2000-2002:2000-2002 -v /tmp/.X11-unix:/tmp/.X11-unix:rw -it carla:eval /bin/bash ./CarlaUE4.sh```
 
