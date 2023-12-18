@@ -67,6 +67,21 @@ python3.7 -m virtualenv tcpenv
 source ./tcpenv/bin/activate
 pip install -r tcp_env_requirements.txt
 ```
+# Training
+### Prepare the dataset:
+- Follow the dataset_preperation/Training Data Preparation_100k.ipynb to create dataset for training.
+
+### Training the model
+- Clone the QwenVL repo ```git clone https://github.com/QwenLM/Qwen-VL.git```
+- Clone the DeepSpeed repo(for distributed training) ```git clone https://github.com/microsoft/DeepSpeed.git```
+- ```cd DeepSpeed```
+- ```DS_BUILD_FUSED_ADAM=1 pip3 install .```
+- ```cd ../Qwen-VL```
+- ```pip3 install -r requirements.txt```
+- ```cp ../Finetune_QwenVL_model/carla_finetune.sh finetune/```
+- run carla_finetune.sh to finetune the Qwen-VL model using LoRA ```sh finetune/carla_finetune.sh```
+
+
 # Benchmarking
 ### Run the carla docker server:
 - ```sudo docker run --privileged --gpus 0 -e SDL_VIDEODRIVER=offscreen -e SDL_HINT_CUDA_DEVICE=0 -p 2000-2002:2000-2002 -v /tmp/.X11-unix:/tmp/.X11-unix:rw -it carla:eval /bin/bash ./CarlaUE4.sh```
