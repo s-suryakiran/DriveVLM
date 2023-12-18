@@ -3,7 +3,7 @@ import os
 import glob
 
 # Define the path to the directory containing the images
-image_folder = '//Users/suryakiran/Downloads/input_image'
+image_folder = "IMAGES_FOLDER"
 video_name = 'output_video.mp4'
 
 # Find all the images in the directory. Adjust the pattern as per your file type.
