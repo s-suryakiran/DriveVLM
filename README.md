@@ -37,4 +37,12 @@ RUN ./ImportAssets.sh
 Run Dockerfile
 - ```docker build -t carla:eval .```
 - ```sudo docker run --privileged --gpus 0 -e SDL_VIDEODRIVER=offscreen -e SDL_HINT_CUDA_DEVICE=0 -p 2000-2002:2000-2002 -v /tmp/.X11-unix:/tmp/.X11-unix:rw -it carla:eval /bin/bash ./CarlaUE4.sh```
-  
+
+Install Python3.7:
+```
+ sudo apt update
+ sudo apt install software-properties-common
+ sudo add-apt-repository ppa:deadsnakes/ppa
+ sudo apt install python3.7
+ sudo apt-get install python3.7-distutils
+```
