@@ -46,3 +46,16 @@ Install Python3.7:
  sudo apt install python3.7
  sudo apt-get install python3.7-distutils
 ```
+Setup Python Virtual Environments:
+```
+sudo apt-get install python3-pip
+python3.10 -m pip install virtualenv
+python3.10 -m virtualenv modelenv
+source ./modelenv/bin/activate
+pip install -r model_env_requirements.txt
+
+python3.7 -m pip install virtualenv
+python3.7 -m virtualenv tcpenv
+source ./tcpenv/bin/activate
+pip install -r tcp_env_requirements.txt
+```
