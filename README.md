@@ -1,7 +1,7 @@
 # DriveVLM
 
 ## Setup
-### Download and setup CARLA 0.9.10.1
+### Download and setup CARLA 0.9.10.1:
 ```
 mkdir carla
 cd carla
@@ -16,7 +16,7 @@ cd ..
 Also update the ~/.bashrc file:
 export CARLA_ROOT=PATH_TO_CARLA_0.9.10.1
 
-### Clone this repo and build the environment
+### Clone this repo and build the environment:
 
 ```
 git clone https://github.com/s-suryakiran/DriveVLM.git
@@ -27,7 +27,7 @@ cd DriveVLM
 export PYTHONPATH=$PYTHONPATH:PATH_TO_DriveVLM
 ```
 
-### Create Dockerfile
+### Create Dockerfile:
 ```Dockerfile
 FROM carlasim/carla:0.9.10.1
 WORKDIR /home/carla/Import
@@ -36,8 +36,8 @@ WORKDIR /home/carla
 RUN ./ImportAssets.sh
 ```
 
-### Build Dockerfile
-```docker build -t carla:eval .```
+### Build Dockerfile:
+- ```docker build -t carla:eval .```
 
 ### Install Python3.7:
 ```
@@ -71,3 +71,11 @@ pip install -r tcp_env_requirements.txt
 - Download their model - ```wget https://storage.googleapis.com/carla_dataset_bucket/Eval_Uploads/best_model.ckpt```
 - Modify the ```TEAM_CONFIG``` in /leaderboard/scripts/run_evaluation.sh
 - run the run_evaluation.sh - ```sh leaderboard/scripts/run_evaluation.sh```
+
+
+## To benchmark our model:
+- Update ```CARLA_ROOT``` with the root folder of CARLA_0.9.10.1 in sh leaderboard/scripts/run_evaluation_carla.sh
+- Enable modelenv and start jupyter notebook server.
+- Open Control_Prediction.ipynb and follow the steps there.
+- After you run all the cells in the notebook, run
+```sh leaderboard/scripts/run_evaluation_carla.sh```
