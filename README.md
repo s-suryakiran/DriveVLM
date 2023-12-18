@@ -1,6 +1,12 @@
 # DriveVLM
 
 ## Setup
+
+### Prerequisites:
+- cuda toolkit 12.1
+- docker
+- nvidia-container-toolkit for docker
+
 ### Download and setup CARLA 0.9.10.1:
 ```
 mkdir carla
