@@ -2,7 +2,7 @@
 
 # Training
 ### Prepare the dataset:
-- Follow the dataset_preperation/Training Data Preparation_100k.ipynb to create dataset for training.
+- Follow the dataset_preparation/Training Data Preparation_100k.ipynb to create dataset for training.
 
 ### Training the model
 - Clone the QwenVL repo ```git clone https://github.com/QwenLM/Qwen-VL.git```
