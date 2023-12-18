@@ -32,3 +32,9 @@ WORKDIR /home/carla/Import
 COPY ./AdditionalMaps_0.9.10.1.tar.gz ./
 WORKDIR /home/carla
 RUN ./ImportAssets.sh
+```
+
+Run Dockerfile
+- ```docker build -t carla:eval .```
+- ```sudo docker run --privileged --gpus 0 -e SDL_VIDEODRIVER=offscreen -e SDL_HINT_CUDA_DEVICE=0 -p 2000-2002:2000-2002 -v /tmp/.X11-unix:/tmp/.X11-unix:rw -it carla:eval /bin/bash ./CarlaUE4.sh```
+  
