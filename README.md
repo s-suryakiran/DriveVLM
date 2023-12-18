@@ -85,3 +85,9 @@ pip install -r tcp_env_requirements.txt
 - Open Control_Prediction.ipynb and follow the steps there.
 - After you run all the cells in the notebook, run
 ```sh leaderboard/scripts/run_evaluation_carla.sh```
+
+
+# References:
+- https://arxiv.org/abs/1711.03938
+- https://arxiv.org/abs/2206.08129
+- https://arxiv.org/abs/2308.12966
