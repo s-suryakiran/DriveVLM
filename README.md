@@ -17,7 +17,7 @@ cd ..
 Clone this repo and build the environment
 
 ```
-git clone https://github.com/OpenPerceptionX/TCP.git](https://github.com/s-suryakiran/DriveVLM.git
+git clone [https://github.com/s-suryakiran/DriveVLM.git](https://github.com/s-suryakiran/DriveVLM.git)
 cd DriveVLM
 ```
 
